@@ -3,7 +3,6 @@
 # 算法 - 算法分析
 <!-- GFM-TOC -->
 * [Question 1: Find the repeating number](#Question-1-Find-the-repeating-number)
-    *  [Question 2:]
 
 <!-- GFM-TOC -->
 
@@ -48,5 +47,12 @@ private void swap(int[] nums, int i, int j) {
 }
 ```
 
+### Summary
+
+- Outer for loop: Iterates through each element.
+- Inner while loop: Ensures each element is placed in its correct index.
+- Duplicate check: Inside the while loop to detect duplicates.
+- Swapping elements: To place elements in their correct positions.
+- Redundant code removal: The unnecessary extra swap at the end of the for loop is removed.
 
 
