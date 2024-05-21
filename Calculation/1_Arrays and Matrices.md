@@ -15,8 +15,28 @@ Output:
 
 <div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif" width="350px"> </div><br>
 
-```java
+Solution: 
 
+```java
+public int duplicate(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+        while (nums[i] != i) {
+            if (nums[i] == nums[nums[i]]) {
+                return  nums[i];
+            }
+            swap(nums, i, nums[i]);
+        }
+        swap(nums, i, nums[i]);
+    }
+    return -1;
+}
+
+private void swap(int[] nums, int i, int j) {
+    int t = nums[i];
+    nums[i] = nums[j];
+    nums[j] = t;
+}
+```
 
 
 
