@@ -13,7 +13,7 @@ Output:
 2
 ```
 
-<div align="center"> <img src="[souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif](https://github.com/kiaky0/Programming/blob/main/souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif)" width="350px"> </div><br>
+<div align="center"> <img src="[[souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif](https://github.com/kiaky0/Programming/blob/main/souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif)](https://raw.githubusercontent.com/kiaky0/Programming/main/souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif)" width="350px"> </div><br>
 
 ```java
 
