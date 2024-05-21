@@ -1,3 +1,7 @@
 # Arrays and Matrices
-/div
+
+/divide
+
+
+
 
