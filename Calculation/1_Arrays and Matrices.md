@@ -2,7 +2,8 @@
 
 # 算法 - 算法分析
 <!-- GFM-TOC -->
-* [Question 1 Find the repeating number](#Question-1-Find-the-repeating-number)
+* [Question 1: Find the repeating number](#Question-1-Find-the-repeating-number)
+      * [Question 2]
 
 <!-- GFM-TOC -->
 
