@@ -58,5 +58,5 @@ private void swap(int[] nums, int i, int j) {
 
 ## 2 Find a Specific Number in a 2D Array
 
-
+<div align="center"> <img src="https://raw.githubusercontent.com/kiaky0/Programming/main/souce/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f33356138633731312d306463302d343631332d393566332d6265393663366336653130342e676966.gif" width="350px"> </div><br>
 
