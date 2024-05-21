@@ -13,8 +13,7 @@ Output:
 2
 ```
 
-![gif](https://github.com/kiaky0/Programming/assets/109141627/fc2256a1-9be4-45c8-8ade-1038f2148148)
-
+<div align="center"> <img src="souce/643b6f18-f933-4ac5-aa7a-e304dbd7fe49.gif" width="350px"> </div><br>
 
 ```java
 
