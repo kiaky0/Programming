@@ -13,8 +13,10 @@ Output:
 2
 ```
 
+![gif](https://github.com/kiaky0/Programming/assets/109141627/fc2256a1-9be4-45c8-8ade-1038f2148148)
 
-![image](https://github.com/kiaky0/Programming/assets/109141627/cdab741f-7f1f-4123-82e1-f2e2aedc4c57)
+
+```java
 
 
 
