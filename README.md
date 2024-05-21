@@ -3,5 +3,5 @@
 ## 📓 Note
 
 
-## ✏️ Calculation
+## ✏️ Calculation & Algorithm
 
