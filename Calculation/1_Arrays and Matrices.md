@@ -3,7 +3,7 @@
 # 算法 - 算法分析
 <!-- GFM-TOC -->
 * [1 Find the repeating number](#1-Find-the-repeating-number)
-* [2 Find a Specific Number in a 2D Array](#2-Find-a-Specific-Number-in-a-2DArray)
+* [2 Find a Specific Number in a 2D Array](#2-Find-a-Specific-Number-in-a-2D-Array)
 
 <!-- GFM-TOC -->
 
