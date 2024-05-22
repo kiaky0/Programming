@@ -6,7 +6,7 @@
 
 Video: [watch](https://www.youtube.com/watch?v=SWLLKLov_qs&t=520s)
 
-
+Sorting Advance: [Note](https://github.com/kiaky0/C_plusplus_learning/blob/main/Data_struct_C%2B%2B/14_Lec13_Sorting.md)
 
 ## Bubble Sort
 
