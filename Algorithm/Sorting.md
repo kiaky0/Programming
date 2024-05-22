@@ -97,6 +97,45 @@ int main() {
 ![image](https://github.com/kiaky0/Programming/assets/109141627/1c429b15-4ad9-4609-8b4e-a3f475abee2e)
 
 
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+	int i, j, num, p, temp, min, arr[10];
+	cout << "Enter the number of element: ";
+	cin >> num;
+	cout << "\nEnter elements: " << endl;
+
+	for (int i = 0; i < num; i++)
+	{
+		cin >> arr[i];
+	}
+	for (int i = 0; i < num-1; i++)
+	{
+		min = arr[i]; 
+		p = i;
+		for (int j = i+1; j < num; j++)
+		{
+			if (min > arr[j]) {
+				min = arr[j];
+				p = j;
+			}
+		}
+		temp = arr[i];
+		arr[i] = arr[p];
+		arr[p] = temp;
+	}
+
+	cout << "\nSorted element are: " << endl;
+	for (int i = 0; i < num; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	return 0;
+}
+```
+
 
 
 
