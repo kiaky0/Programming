@@ -51,10 +51,9 @@ Sorted elements:
 1       3       8       9       12      14      21      22      23
 ```
 
-## Selection Sort
+## Insertion Sort
 
-![image](https://github.com/kiaky0/Programming/assets/109141627/c6b96a33-01fc-4a8f-87c5-d63cdfe3fb30)
-
+![image](https://github.com/kiaky0/Programming/assets/109141627/5bb768e2-af92-471c-9f78-569a89b2254e)
 
 
 ```C++
