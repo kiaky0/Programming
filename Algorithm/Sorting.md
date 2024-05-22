@@ -92,6 +92,10 @@ int main() {
 }
 ```
 
+## Selection Sort
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/1c429b15-4ad9-4609-8b4e-a3f475abee2e)
+
 
 
 
