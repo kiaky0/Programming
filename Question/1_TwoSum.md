@@ -2,13 +2,11 @@
 
 ## Qeustion 1 - Input Array Is Sorted
 
-Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
-
-Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
-
-The tests are generated such that there is exactly one solution. You may not use the same element twice.
-
-Your solution must use only constant extra space.
+- Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.
+- Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+- Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+- The tests are generated such that there is exactly one solution. You may not use the same element twice.
+- Your solution must use only constant extra space.
 
  
 ```
@@ -60,7 +58,7 @@ class Solution {
 
 ## Question 2 - Sum of Square Number
 
-Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
+- Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
 ```
 Example 1:
@@ -131,9 +129,9 @@ Note for Set -> [Set](https://github.com/kiaky0/Programming/blob/main/Note/Set.m
 
 ### Question descroption
 
-Given a string s, reverse only all the vowels in the string and return it.
+- Given a string s, reverse only all the vowels in the string and return it.
 
-The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+- The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
 
  
 ```
