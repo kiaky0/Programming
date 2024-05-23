@@ -147,6 +147,9 @@ Input: s = "leetcode"
 Output: "leotcede"
 ```
 
+![image](https://github.com/kiaky0/Programming/assets/109141627/78d85d55-e6a3-4336-a3c2-b07142feddd7)
+
+
 Solution:
 
 ```java
