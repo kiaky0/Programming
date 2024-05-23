@@ -1,6 +1,6 @@
-# Two Sum II - Input Array Is Sorted
+# Two Sum II
 
-## Qeustion
+## Qeustion 1 - Input Array Is Sorted
 
 Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
 
@@ -58,7 +58,7 @@ class Solution {
 }
 ```
 
-## Sum of Square Number
+## Question 2 - Sum of Square Number
 
 Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
@@ -73,10 +73,59 @@ Example 2:
 Input: c = 3
 Output: false
 ```
+Solution:
+
+- Using two point i and j. j is from the quare root of the input.
+- two condition the sum larger or smaller than input
+- if sum larger than input move j to left
+- if sum smaller than input move i to right
+
+```java
+class Solution {
+    public boolean judgeSquareSum(int c) {
+        long i = 0;
+        long j = (long) Math.sqrt(c);
+
+        while(i<=j){
+            long powSum = i*i + j*j;
+            if(powSum == c){
+                return true;
+            }
+            else if(powSum < c){
+                i++;
+            }else{
+                j--;
+            }
+        }
+        return false;
+    }
+}
+```
+
+```java
+class Solution {
+    public boolean judgeSquareSum(int c) {
+        if(c<0) return false;
+        int i=0, j = (int) Math.sqrt(c);
+
+        while(i<=j){
+            int powSum = i*i + j*j;
+            if(powSum == c){
+                return true;
+            }else if(powSum > c){
+                j--;
+            }else{
+                i++;
+            }
+        }
+        return false;
+    }
+}
+```
 
 
 
-
+## Question 3 - Reverse Vowels of a String
 
 
 
