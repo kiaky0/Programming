@@ -11,15 +11,17 @@ The tests are generated such that there is exactly one solution. You may not use
 Your solution must use only constant extra space.
 
  
-
+```
 Example 1:
-
 Input: numbers = [2,7,11,15], target = 9
-
 Output: [1,2]
-
 Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
 
+Example 2:
+Input: numbers = [2,3,4], target = 6
+Output: [1,3]
+Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
+```
 
 ## 题目描述：在有序数组中找出两个数，使它们的和为 target。
 
@@ -35,6 +37,43 @@ Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We retu
 
 
 Solution
+
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        if (numbers == null) return null;
+        int i = 0, j = numbers.length - 1;
+        while (i < j) {
+            int sum = numbers[i] + numbers[j];
+            if (sum == target) {
+                return new int[]{i + 1, j + 1};
+            } else if (sum < target) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        return null;
+    }
+}
+```
+
+## Sum of Square Number
+
+Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
+
+```
+Example 1:
+
+Input: c = 5
+Output: true
+Explanation: 1 * 1 + 2 * 2 = 5
+Example 2:
+
+Input: c = 3
+Output: false
+```
+
 
 
 
