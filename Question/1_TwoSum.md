@@ -177,3 +177,61 @@ class Solution {
 }
 ```
 
+## Question 4 - Valid Palindrome II
+
+Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+
+ ```
+
+Example 1:
+
+Input: s = "aba"
+Output: true
+Example 2:
+
+Input: s = "abca"
+Output: true
+Explanation: You could delete the character 'c'.
+Example 3:
+
+Input: s = "abc"
+Output: false
+```
+
+## Approach
+
+First we create two pointers, and start iterating until they meet, on each iteration we take chars at left and right pointers locations. if chars are not equals we use compare method that we wrote and return any true or false as result, in compare method we pass left and right pointers but in one method we shift right pointer and in another we shift left pointer, then we increment left pointer and decrement right pointer. If we reached end we return true, in compare method we do same logic but when chars are not equals we return false instead calling compare method, this is due to reason that we by calling compare method emulate removing one of the chars and we can't remove twice.
+
+```java
+class Solution {
+    public boolean validPalindrome(String s) {
+        //declare two pointers
+        int l=0, r=s.length()-1;
+        // iterate until two pointer are meet
+        while(l<r){
+            // take char 
+            char lc = s.charAt(l);
+            char rc = s.charAt(r);
+
+            if(lc != rc){
+                return compare(s, l + 1, r) || compare(s, l, r - 1);
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
+    // create a compare method
+    public boolean compare(String s, int l, int r){
+        while(l<r){
+            char lc = s.charAt(l);
+            char rc = s.charAt(r);
+
+            if(lc != rc) return false;
+            l++;
+            r--;
+        }
+        return true;
+    }
+}
+```
