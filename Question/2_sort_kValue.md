@@ -12,7 +12,9 @@ Output: 5
 
 题目描述：找到倒数第 k 个的元素。
 
-Sorting ：时间复杂度 O(NlogN)，空间复杂度 O(1)
+### Approach 1 - Sort and Select
+
+时间复杂度 O(NlogN)，空间复杂度 O(1)
 
 ```java
 public int findKthLargest(int[] nums, int k) {
@@ -21,6 +23,29 @@ public int findKthLargest(int[] nums, int k) {
 }
 ```
 
+### Approach 2 - Min-Heap
+
+
+
+
+```java
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        for(int i = 0; i<k; i++){
+            minHeap.offer(nums[i]);
+        }
+        
+        for(int i=k; i<nums.length; i++){
+            if(nums[i] > minHeap.peek()){
+                minHeap.poll();
+                minHeap.offer(nums[i]);
+            }
+        }
+        return minHeap.peek();
+    }
+}
+```
 
 
 
