@@ -1,6 +1,6 @@
 # Two Sum II
 
-## Qeustion 1 - Input Array Is Sorted
+## Qeustion 1 - 167.Input Array Is Sorted
 
 - Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number.
 - Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
@@ -56,7 +56,7 @@ class Solution {
 }
 ```
 
-## Question 2 - Sum of Square Number
+## Question 2 - 633.Sum of Square Number
 
 - Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
@@ -123,7 +123,7 @@ class Solution {
 
 
 
-## Question 3 - Reverse Vowels of a String
+## Question 3 - 345.Reverse Vowels of a String
 
 Note for Set -> [Set](https://github.com/kiaky0/Programming/blob/main/Note/Set.md)
 
@@ -177,7 +177,7 @@ class Solution {
 }
 ```
 
-## Question 4 - Valid Palindrome II
+## Question 4 - 680.Valid Palindrome II
 
 Given a string s, return true if the s can be palindrome after deleting at most one character from it.
 
@@ -236,7 +236,7 @@ class Solution {
 }
 ```
 
-## Quesetion 5 - Merge Sorted Array
+## Quesetion 5 - 88.Merge Sorted Array
 
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
@@ -332,7 +332,7 @@ class Solution {
 }
 ```
 
-## Question 6 - Longest Word in Dictionary through Deleting
+## Question 6 - 524.Longest Word in Dictionary through Deleting
 
 Given a string s and a string array dictionary, return the longest string in the dictionary that can be formed by deleting some of the given string characters. If there is more than one possible result, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
 
