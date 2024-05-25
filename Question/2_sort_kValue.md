@@ -275,7 +275,10 @@ Output: [0,1,2]
 
 ```
 
-Approch
+### Approch - visualize
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/e4bd145e-741f-4d51-abe7-92003a221d51)
+
 
 ```java
 class Solution {
