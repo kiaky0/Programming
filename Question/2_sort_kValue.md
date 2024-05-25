@@ -42,6 +42,7 @@ class Solution {
                 minHeap.offer(nums[i]);
             }
         }
+        // peek() retrreve the first element of stack
         return minHeap.peek();
     }
 }
