@@ -186,4 +186,126 @@ class Solution:
         return top_numbers
 ```
 
+## Question 3 - 451. Sort Characters By Frequency
+
+Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.
+
+Return the sorted string. If there are multiple answers, return any of them.
+
+ ```
+
+Example 1:
+
+Input: s = "tree"
+Output: "eert"
+Explanation: 'e' appears twice while 'r' and 't' both appear once.
+So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
+Example 2:
+
+Input: s = "cccaaa"
+Output: "aaaccc"
+Explanation: Both 'c' and 'a' appear three times, so both "cccaaa" and "aaaccc" are valid answers.
+Note that "cacaca" is incorrect, as the same characters must be together.
+Example 3:
+
+Input: s = "Aabb"
+Output: "bbAa"
+Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
+Note that 'A' and 'a' are treated as two different characters.
+
+```
+
+### Approach
+
+1. Iterate through the input string 's' and count the frequency of each character using an unordered map 'hm'.
+2. Use a priority queue 'pq' to store pairs of characters and their frequencies, sorted in decreasing order of frequency.
+3. Define a lambda function 'cmp' to compare pairs based on the second element (frequency).
+4. Iterate through the hashmap entries and push each pair into the priority queue.
+5. Pop elements from the priority queue and append characters to the result string according to their frequency.
+
+
+
+```java
+
+
+class Solution {
+    public String frequencySort(String s) {
+        Map<Character, Integer> hm = new HashMap<>();
+        
+        for (char c : s.toCharArray()) {
+            hm.put(c, hm.getOrDefault(c, 0) + 1);
+        }
+        
+        PriorityQueue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(
+            (a, b) -> b.getValue() - a.getValue()
+        );
+        
+        pq.addAll(hm.entrySet());
+        
+        StringBuilder result = new StringBuilder();
+        while (!pq.isEmpty()) {
+            Map.Entry<Character, Integer> entry = pq.poll();
+            result.append(String.valueOf(entry.getKey()).repeat(entry.getValue()));
+        }
+        
+        return result.toString();
+    }
+}
+```
+
+## Question 4 - 75. Sort Colors
+
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+
+You must solve this problem without using the library's sort function.
+
+ ```
+
+Example 1:
+
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+Example 2:
+
+Input: nums = [2,0,1]
+Output: [0,1,2]
+
+
+```
+
+Approch
+
+```java
+class Solution {
+    public void sortColors(int[] nums) {
+        int[] frequency = new int[]{0, 0, 0};
+        for(int i=0; i< nums.length; i++){
+            if(nums[i] == 0){
+                frequency[0]++;
+            }else if(nums[i] == 1){
+                frequency[1]++;
+            }else{
+                frequency[2]++;
+            }
+        }
+        int iter = 0;
+        for(int i=0; i<nums.length;){
+            if(frequency[iter]>0){
+                nums[i] = iter;
+                frequency[iter]--;
+                i++;
+            }else{
+                iter++;
+            }
+        }
+    }
+}
+```
+
+
+
+
+
 
