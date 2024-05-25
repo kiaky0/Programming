@@ -38,8 +38,8 @@ class Solution {
         
         for(int i=k; i<nums.length; i++){
             if(nums[i] > minHeap.peek()){
-                minHeap.poll();
-                minHeap.offer(nums[i]);
+                minHeap.poll();           // take out and remove
+                minHeap.offer(nums[i]);   // push into minHeap
             }
         }
         // peek() retrreve the first element of stack
