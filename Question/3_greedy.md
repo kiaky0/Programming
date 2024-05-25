@@ -29,7 +29,25 @@ You need to output 2.
 
 
 
+### Approach
 
+![image](https://github.com/kiaky0/Programming/assets/109141627/a75677b8-e3a9-45d9-8148-4673eba6a668)
+
+```java
+public int findContentChildren(int[] grid, int[] size) {
+    if (grid == null || size == null) return 0;
+    Arrays.sort(grid);
+    Arrays.sort(size);
+    int gi = 0, si = 0;
+    while (gi < grid.length && si < size.length) {
+        if (grid[gi] <= size[si]) {
+            gi++;
+        }
+        si++;
+    }
+    return gi;
+}
+```
 
 
 
