@@ -49,6 +49,85 @@ public int findContentChildren(int[] grid, int[] size) {
 }
 ```
 
+## Question 2 - 435. Non-overlapping Intervals
+
+Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+
+ 
+```
+Example 1:
+
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
+```
+
+### Approach: 
+
+[Explaination video](https://www.youtube.com/watch?v=nONCGxWoUfM)
+
+[Leetcode solution](https://leetcode.com/problems/non-overlapping-intervals/solutions/3785409/beat-s-100-c-java-python-beginner-friendly/)
+
+The function uses a greedy approach to find the maximum number of non-overlapping meetings. It iterates through the sorted intervals starting from the second interval (index 1) because we've already counted the first interval as non-overlapping. For each interval at index i, it checks if the start time of the current interval (intervals[i][0]) is greater than or equal to the end time of the previous interval (intervals[prev][1]). If this condition is true, it means the current interval does not overlap with the previous one, and we can safely attend this meeting. In that case, we update prev to the current index i and increment count to reflect that we have attended one more meeting.
+
+```java
+class Solution {
+    public int eraseOverlapIntervals(int[][] intervals) {
+        int n = intervals.length;
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[1], b[1]));
+        int prev = 0;
+        int count = 1;
+        for (int i = 1; i < n; i++) {
+            if (intervals[i][0] >= intervals[prev][1]) {
+                prev = i;
+                count++;
+            }
+        }
+        return n - count;
+    }
+}
+```
+
+
+## Question 3 - 452. Minimum Number of Arrows to Burst Balloons
+
+```
+Input: points = [[10,16],[2,8],[1,6],[7,12]]
+Output: 2
+Explanation: The balloons can be burst by 2 arrows:
+- Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].
+- Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].
+```
+
+### Approach 
+
+[video explaination](https://www.youtube.com/watch?v=lPmkKnvNPrw)
+
+[Leetcode Solution](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/solutions/4890422/easy-91-77-beats-c-java-python-javascript-c/)
+
+```java
+class Solution {
+    public int findMinArrowShots(int[][] points) {
+        // Sort the balloons based on their end coordinates
+        Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
+
+        int arrows = 1;
+        int prevEnd = points[0][1];
+        
+        // Count the number of non-overlapping intervals
+        for (int i = 1; i < points.length; ++i) {
+            if (points[i][0] > prevEnd) {
+                arrows++;
+                prevEnd = points[i][1];
+            }
+        }
+        return arrows;
+    }
+}
+```
+
+
+
 
 
 
