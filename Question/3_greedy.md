@@ -126,8 +126,196 @@ class Solution {
 }
 ```
 
+## Question 4 - 406. Queue Reconstruction by Height
+
+```
+Example 1:
+
+Input: people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
+Output: [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
+Explanation:
+Person 0 has height 5 with no other people taller or the same height in front.
+Person 1 has height 7 with no other people taller or the same height in front.
+Person 2 has height 5 with two persons taller or the same height in front, which is person 0 and 1.
+Person 3 has height 6 with one person taller or the same height in front, which is person 1.
+Person 4 has height 4 with four people taller or the same height in front, which are people 0, 1, 2, and 3.
+Person 5 has height 7 with one person taller or the same height in front, which is person 1.
+Hence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue.
+
+```
+
+[video explaination](https://www.youtube.com/watch?v=LnxOUvwZkYo&t=192s)
+
+[leetcode solution](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
+
+[gpt visualization](https://github.com/kiaky0/Programming/blob/main/Note/array_sorting_explaination.md)
+
+## Approach
+
+```java
+class Solution {
+    public int[][] reconstructQueue(int[][] people) {
+        // sorting with the heigh, then the k value
+        Arrays.sort(people, (a,b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
+        
+        List<int[]> ordered = new LinkedList<>();
+        // sort according to the index
+        for (int[] p: people) ordered.add(p[1], p);
+
+        return ordered.toArray(new int[people.length][2]);
+    }
+}
+```
+
+### Question 5 - 121. Best Time to Buy and Sell Stock
+
+```
+Example 1:
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+Example 2:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+```
+
+[video explaination](https://www.youtube.com/watch?v=1pkOgXD63yU)
+
+[solution](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadane-s-algorithm-java-c-python-rust-javascript/)
+
+### Approach
+
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buy = prices[0];
+        int profit = 0;
+
+        for(int i =1; i<prices.length; i++){
+            if(prices[i] < buy){
+                buy = prices[i];
+            } else if(prices[i] - buy > profit){
+                profit = prices[i] - buy;
+            }
+        }
+        return profit;
+    }
+}
+```
 
 
+## Question 6 - 122. Best Time to Buy and Sell Stock II (Easy)
+
+题目描述：可以进行多次交易，多次交易之间不能交叉进行，可以进行多次交易。
+
+```
+Example
+
+Input: prices = [7,1,5,3,6,4]
+Output: 7
+Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+Total profit is 4 + 3 = 7.
+```
+
+[video explaination](https://www.youtube.com/watch?v=3SJ3pUkPQMc)
+
+[leetcode solution](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+
+### Approach
+
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int max = 0;
+        int start = prices[0];
+        int len = prices.length;
+        for(int i = 1;i<len; i++){
+            if(start < prices[i]) max += prices[i] - start;
+            start = prices[i];
+        }
+        return max;
+    }
+}
+```
+
+### Question 7 - 605. Can Place Flowers
+
+题目描述：flowerbed 数组中 1 表示已经种下了花朵。花朵之间至少需要一个单位的间隔，求解是否能种下 n 朵花。
+
+```
+Example 1:
+
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true
+Example 2:
+
+Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false
+```
+
+[video explaination](https://www.youtube.com/watch?v=ZGxqqjljpUI)
+
+[leetcode solutiion](https://leetcode.com/problems/can-place-flowers/submissions/1269159090/)
+
+### Approach
+
+```java
+class Solution {
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        for (int i = 0; i < flowerbed.length; i++) {
+            boolean left = (i == 0 || flowerbed[i - 1] == 0); // check is the first one or previous is = 0
+            boolean right = i == flowerbed.length - 1 || flowerbed[i + 1] == 0; // check is the last one or next is = 0
+            
+            if (left && right && flowerbed[i] == 0) { // if both adjection is = 0 continue
+                flowerbed[i] = 1;           // put the flower inside
+                n--;
+            }
+        }
+        return n <= 0;        
+    }
+}
+```
+
+
+## Question 8 - 392. Is Subsequence
+
+```
+
+Example 1:
+
+Input: s = "abc", t = "ahbgdc"
+Output: true
+Example 2:
+
+Input: s = "axc", t = "ahbgdc"
+Output: false
+ 
+```
+
+[leetcode solution](https://leetcode.com/problems/is-subsequence/solutions/5101957/video-two-pointer-solution/)
+
+### Approach
+
+```java
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        int i=0;
+        int j =0;
+        while(j<t.length() && i < s.length()){
+            if(t.charAt(j)==s.charAt(i)){
+                i++;
+            }
+            j++;
+        }
+        return i==s.length();
+    }
+}
+```
 
 
 
