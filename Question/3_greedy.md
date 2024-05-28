@@ -317,8 +317,141 @@ class Solution {
 }
 ```
 
+## Question 9 - 665. Non-decreasing Array
 
+```
+Example 1:
 
+Input: nums = [4,2,3]
+Output: true
+Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
+Example 2:
 
+Input: nums = [4,2,1]
+Output: false
+Explanation: You cannot get a non-decreasing array by modifying at most one element.
+```
+
+[video explaination](https://www.youtube.com/watch?v=RegQckCegDk&t=456s)
+
+[leetcode](https://leetcode.com/problems/non-decreasing-array/description/)
+
+### Approach
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/5dd49593-6115-4618-83b5-79df1ee1b22a)
+
+```java
+public boolean checkPossibility(int[] nums) {
+    int cnt = 0;
+    for (int i = 1; i < nums.length && cnt < 2; i++) {
+        if (nums[i] >= nums[i - 1]) {
+            continue;
+        }
+        cnt++;
+        if (i - 2 >= 0 && nums[i - 2] > nums[i]) {
+            nums[i] = nums[i - 1];
+        } else {
+            nums[i - 1] = nums[i];
+        }
+    }
+    return cnt <= 1;
+}
+```
+
+## Question 10 - 53. Maximum Subarray
+
+Given an integer array nums, find the 
+subarray with the largest sum, and return its sum.
+
+ 
+```
+Example 1:
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+
+```
+
+[video explaination](https://www.youtube.com/watch?v=5WZl3MMT0Eg&t=374s)
+
+### Appraoch
+
+```java
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+        
+        for (int i = 0; i < nums.length; i++) {
+            currentSum += nums[i];
+            
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+            }
+            
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+        }
+        
+        return maxSum;
+    }
+}
+```
+
+## Question 11 - 763. Partition Labels
+
+You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+
+Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+
+Return a list of integers representing the size of these parts.
+
+```
+
+Example 1:
+
+Input: s = "ababcbacadefegdehijhklij"
+Output: [9,7,8]
+Explanation:
+The partition is "ababcbaca", "defegde", "hijhklij".
+This is a partition so that each letter appears in at most one part.
+A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts.
+```
+
+[Video explaination](https://www.youtube.com/watch?v=B7m8UmZE-vw)
+
+[leetcode solution](https://leetcode.com/problems/partition-labels/solutions/1868842/java-c-visually-explaineddddd/)
+
+### Approach
+
+```java
+class Solution {
+    public List<Integer> partitionLabels(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        // filling impact of character's
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            map.put(ch, i);
+        }
+        // making of result
+        List<Integer> res = new ArrayList<>();
+        int prev = -1;
+        int max = 0;
+        
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            max = Math.max(max, map.get(ch));
+            if(max == i){
+                // partition time
+                res.add(max - prev);
+                prev = max;
+            }
+        }
+        return res;
+    }
+}
+```
 
 
