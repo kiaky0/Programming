@@ -298,7 +298,43 @@ class Solution {
 }
 ```
 
+## Question 6 - 303. Range Sum Query - Immutable
 
+```
+NumArray numArray = new NumArray([-2, 0, 3, -5, 2, -1]);
+numArray.sumRange(0, 2); // return (-2) + 0 + 3 = 1
+numArray.sumRange(2, 5); // return 3 + (-5) + 2 + (-1) = -1
+numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
+```
+
+[Video explaination](https://www.youtube.com/watch?v=2pndAmo_sMA)
+
+### Approach
+
+[Solution](https://leetcode.com/problems/range-sum-query-immutable/solutions/5132197/java-runtime-7ms-beats-100-00-of-users-with-java-2-approaches/)
+
+```java
+class NumArray {
+    int[] nums;
+    public NumArray(int[] nums) {
+        for(int i=1; i<nums.length; i++){
+            nums[i] += nums[i-1];
+        }
+        this.nums=nums;
+    }
+    
+    public int sumRange(int left, int right) {
+        if(left == 0) return nums[right];
+        return nums[right] - nums[left-1];
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray obj = new NumArray(nums);
+ * int param_1 = obj.sumRange(left,right);
+ */
+```
 
 
 
