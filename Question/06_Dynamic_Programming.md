@@ -1,5 +1,7 @@
-# Fibonacci Sequence
+# Dynamic Programming
 
+## Fibonacci Sequence
+--------------------------------------------------------------------------------------------------
 
 ## Question 1 - 70. Climbing Stairs
 
@@ -203,8 +205,6 @@ Given a m x n grid filled with non-negative numbers, find a path from top left t
 Note: You can only move either down or right at any point in time.
 
 
-![image](https://github.com/kiaky0/Programming/assets/109141627/bd877441-63ab-49fa-992b-8967d5e12953)
-
 <div align="center"> <img src="https://github.com/kiaky0/Programming/assets/109141627/bd877441-63ab-49fa-992b-8967d5e12953" width="350px"> </div><br>
 
 ```
@@ -242,9 +242,23 @@ class Solution {
 }
 ```
 
+Lowest runtime with Fibonacci Sequence
 
-
-
+```java
+class Solution {
+    public int minPathSum(int[][] grid) {
+        int m = grid.length, n = grid[0].length;
+        int dp[][] = new int[m][n];
+        return find(grid, m - 1, n - 1, dp);
+    }
+    public static int find(int[][] grid, int m, int n, int dp[][]) {
+        if (m == 0 && n == 0)    return grid[m][n];
+        else if (m < 0 || n < 0)    return Integer.MAX_VALUE;
+        else if (dp[m][n] != 0)    return dp[m][n];
+        return dp[m][n] = grid[m][n] + Math.min(find(grid, m - 1, n, dp), find(grid, m, n - 1, dp));
+    }
+}
+```
 
 
 
