@@ -205,6 +205,7 @@ Note: You can only move either down or right at any point in time.
 
 ![image](https://github.com/kiaky0/Programming/assets/109141627/bd877441-63ab-49fa-992b-8967d5e12953)
 
+<div align="center"> <img src="(https://github.com/kiaky0/Programming/assets/109141627/bd877441-63ab-49fa-992b-8967d5e12953)" width="350px"> </div><br>
 
 ```
 Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
