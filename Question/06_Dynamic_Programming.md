@@ -260,6 +260,44 @@ class Solution {
 }
 ```
 
+## Question 5 - 62. Unique Paths
+
+<div align="center"> <img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png" width="350px"> </div><br>
+
+
+```
+Input: m = 3, n = 2
+Output: 3
+Explanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Down -> Down
+2. Down -> Down -> Right
+3. Down -> Right -> Down
+```
+
+
+
+### Approach
+
+[video solution](https://www.youtube.com/watch?v=L6dWXuh8BuE)
+
+```java
+class Solution {
+    public int uniquePaths(int m, int n) {
+        int[] dp = new int[m];
+
+        for(int i=0; i<m; i++){
+            dp[i] = 1;
+        }
+        for(int j=1; j<n; j++){
+            for(int i=1; i<m; i++){
+                dp[i] = dp[i]+dp[i-1];
+            }
+        }
+        return dp[m-1];
+    }
+}
+```
+
 
 
 
