@@ -342,14 +342,141 @@ class NumArray {
  */
 ```
 
+## Question 7 - 413. Arithmetic Slices
+
+
+Given an integer array nums, return the number of arithmetic subarrays of nums.
+
+A subarray is a contiguous subsequence of the array.
+
+```
+
+Example 1:
+
+Input: nums = [1,2,3,4]
+Output: 3
+Explanation: We have 3 arithmetic slices in nums: [1, 2, 3], [2, 3, 4] and [1,2,3,4] itself.
+```
+
+### Appraoch
+
+Three integer three integer loop through
+
+[Video solution](https://www.youtube.com/watch?v=DEqVRwxYt6U)
+
+
+```java
+class Solution {
+    public int numberOfArithmeticSlices(int[] nums) {
+        if(nums.length <= 2) return 0;
+
+        int[] dp = new int[nums.length];
+        int res = 0;
+
+        for(int i=2; i<nums.length; i++){
+            if(nums[i] - nums[i-1] == nums[i-1] - nums[i-2]) {
+                dp[i] = dp[i-1] + 1;
+                res += dp[i];
+            }
+        }
+        return res;
+    }
+}
+```
 
 
 
+## Question 8 - 343. Integer Break
 
+Given a positive integer n, break it into the sum of at least two positive integers and maximize the product of those integers. Return the maximum product you can get.
 
+```
+Input: 10
+Output: 36
+Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
+```
 
+### Approach - Dynamic Programming
 
+[Solution](https://www.jiakaobo.com/leetcode/343.%20Integer%20Break.html)
 
+当前的最大乘积
+把当前数字拆分为两部分
+两部分都是之前拆分的结果，比如把10拆分成3和7
+找到dp[3]，如果拆分3那么得到最大乘积是2，但是也可以选择直接用3本身，这样会让乘积更大
+因此Math.max(j, dp[j])
+对于7来说，选择dp[7]比7本身更大，因此最后选择3 * 12 = 36，得到结果
+
+```java
+class Solution {
+    public int integerBreak(int n) {
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        
+        for(int i = 2; i <= n; i ++) {
+            for(int j = 1; j < i; j ++) {
+                dp[i] = Math.max(dp[i], Math.max(j, dp[j]) * Math.max(i - j, dp[i - j]));
+            }
+        }
+        return dp[n];
+    }
+}
+```
+
+Simple solution with greedy approach
+
+```java
+class Solution {
+    public int integerBreak(int n) {
+       if(n<=3){
+            return n-1;
+        }
+        int ans=1;
+        while(n>4){
+            ans=ans*3;
+            n=n-3;
+        }
+        ans=ans*n;
+        return ans;
+
+    }
+}
+```
+
+## Question 9 - 279. Perfect Squares
+
+Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, …) which sum to n.
+
+```
+Input: n = 13
+Output: 2
+Explanation: 13 = 4 + 9.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/279.%20Perfect%20Squares.html)
+
+Dynamic Programming
+
+```java
+class Solution {
+    public int numSquares(int n) {
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+        for(int i = 1; i <= n; i++){
+            for (int j = 0; j <= i; j++){
+                if ( (i - j * j) >= 0 && dp[i - j * j] != Integer.MAX_VALUE){
+                    dp[i] = Math.min(dp[i], dp[i - j * j] + 1);
+                }
+            }
+        }
+        
+        return dp[n];
+    }
+}
+```
 
 
 
