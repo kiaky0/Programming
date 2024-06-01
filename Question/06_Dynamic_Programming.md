@@ -479,7 +479,107 @@ class Solution {
 ```
 
 
+## Question 10 - 91. Decode Ways
 
+A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
+‘A’ -> 1 ‘B’ -> 2 … ‘Z’ -> 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
+
+```
+Example 1:
+
+Input: "12"
+Output: 2
+Explanation: It could be decoded as "AB" (1 2) or "L" (12).
+### Approach
+```
+
+### Approach
+
+[solution](https://www.jiakaobo.com/leetcode/91.%20Decode%20Ways.html)
+
+```
+class Solution {
+    public int numDecodings(String s) {
+        if(s==null || s.length() == 0 || s.charAt(0) == '0') return 0;
+        int[] dp = new int[s.length() +1];
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for(int i=1; i<s.length(); i++){
+            if(s.charAt(i) != '0'){
+                dp[i+1] += dp[i];
+            }
+
+            int num = Integer.valueOf(s.substring(i-1, i+1));
+            if(num >= 10 && num <= 26){
+                dp[i+1] += dp[i-1];
+            }
+        }
+        return dp[s.length()];
+    }
+}
+```
+
+## Question 11 - 300. Longest Increasing Subsequence
+
+Given an integer array nums, return the length of the longest strictly increasing subsequence
+
+```
+Example 1:
+
+Input: nums = [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/300.%20Longest%20Increasing%20Subsequence.html)
+
+Dynamic Programming and Binary Search
+
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int[] tails = new int[nums.length + 1];
+        Arrays.fill(tails, Integer.MAX_VALUE);
+
+        for(int num : nums){
+            int index = helper(tails, num);
+            tails[index] = num;
+        }
+
+        int res = 0;
+
+        for(int num : tails){
+            if(num != Integer.MAX_VALUE){
+                res++;
+            }
+        }
+
+        return res;
+    }
+
+    private int helper(int[] nums, int target){
+        int start = 0;
+        int end = nums.length - 1;
+
+        while(start + 1 < end){
+            int mid = (start + end) / 2;
+
+            if(nums[mid] == target) return mid;
+
+            if(nums[mid] < target){
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+
+        return end;
+    }
+}
+```
 
 
