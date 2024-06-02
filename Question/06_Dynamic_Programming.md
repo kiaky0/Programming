@@ -687,5 +687,105 @@ class Solution {
 }
 ```
 
+## Question 15 - 416. Partition Equal Subset Sum
+
+Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+
+```
+Example 1:
+
+Input: nums = [1,5,11,5]
+Output: true
+Explanation: The array can be partitioned as [1, 5, 5] and [11].
+Example 2:
+
+Input: nums = [1,2,3,5]
+Output: false
+Explanation: The array cannot be partitioned into equal sum subsets.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/416.%20Partition%20Equal%20Subset%20Sum.html)
+
+```java
+class Solution {
+    public boolean canPartition(int[] nums) {
+        int sum = 0;
+
+        for (int num : nums) {
+            sum += num;
+        }
+
+        if (sum % 2 != 0) {
+            return false;
+        }
+
+        int target = sum / 2;
+
+        int n = nums.length;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+
+        for (int num : nums) {
+            for (int currSum = target; currSum > 0; currSum--) {
+                if (currSum - num >= 0) {
+                    dp[currSum] = dp[currSum] || dp[currSum - num];
+                }
+            }
+        }
+
+        return dp[target];
+    }
+}
+```
+
+
+
+## Question 16 - 322. Coin Change
+
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+
+```
+Example 1:
+
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/322.%20Coin%20Change.html)
+
+```java
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+        
+        for(int i = 1; i <= amount; i++){
+            for (int coin : coins){
+                if (i - coin >= 0 && dp[i - coin] != Integer.MAX_VALUE){
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                }
+            }
+        }
+        
+        return dp[amount] == Integer.MAX_VALUE ? -1 : dp[amount];
+    }
+}
+```
+
+
+
+
+
+
+
+
 
 
