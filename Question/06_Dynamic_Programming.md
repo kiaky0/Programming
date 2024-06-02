@@ -624,10 +624,68 @@ class Solution {
 }
 ```
 
+## Question 13 - 376. Wiggle Subsequence
 
+[Explaination](https://www.jiakaobo.com/leetcode/376.%20Wiggle%20Subsequence.html)
 
+```
+Example 1:
 
+Input: [1,7,4,9,2,5]
+Output: 6
+Explanation: The entire sequence is a wiggle sequence.
+Example 2:
 
+Input: [1,17,5,10,13,15,10,5,16,8]
+Output: 7
+Explanation: There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].
+```
+
+### Approach
+
+```java
+public int wiggleMaxLength(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+    int up = 1, down = 1;
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] > nums[i - 1]) {
+            up = down + 1;
+        } else if (nums[i] < nums[i - 1]) {
+            down = up + 1;
+        }
+    }
+    return Math.max(up, down);
+}
+```
+
+## Question 14 - 1143. Longest Common Subsequence
+
+[Video Explaination](https://leetcode.com/problems/longest-common-subsequence/solutions/5162301/simple-iterative-solution-with-diagrams-in-video-javascript-c-java-python/)
+
+### Approach
+
+```java
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        int n = text1.length();
+        int m = text2.length();
+        int[][] dpGrid = new int[n + 1][m + 1];
+
+        for (int row = n - 1; row >= 0; row--) {
+            for (int col = m - 1; col >= 0; col--) {
+                if (text1.charAt(row) == text2.charAt(col)) {
+                    dpGrid[row][col] = 1 + dpGrid[row + 1][col + 1];
+                } else {
+                    dpGrid[row][col] = Math.max(dpGrid[row + 1][col], dpGrid[row][col + 1]);
+                }
+            }
+        }
+        return dpGrid[0][0];
+    }
+}
+```
 
 
 
