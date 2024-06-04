@@ -1021,9 +1021,52 @@ class Solution {
 }
 ```
 
+## Question 20 - 309. Best Time to Buy and Sell Stock with Cooldown
+
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times) with the following restrictions:
+
+After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day). Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+
+```
+Example 1:
+
+Input: prices = [1,2,3,0,2]
+Output: 3
+Explanation: transactions = [buy, sell, cooldown, buy, sell]
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/309.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown)
+
+- buy[i]表示在第i天之前最后一个操作是买，此时的最大收益
+- sell[i]表示在第i天之前最后一个操作是卖，此时的最大收益
+- rest[i]表示在第i天之前最后一个操作是冷冻期，此时的最大收益
 
 
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        if (prices == null || prices.length == 0) return 0;
 
+        int[] sell = new int[prices.length];
+        int[] buy = new int[prices.length];
+        int[] rest = new int[prices.length];
 
+        sell[0] = 0;
+        buy[0] = -prices[0];
+        rest[0] = 0;
+
+        for (int i = 1; i < prices.length; ++i) {
+            buy[i] = Math.max(buy[i - 1], rest[i - 1] - prices[i]);
+            sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);
+            rest[i] = Math.max(sell[i - 1], Math.max(buy[i - 1], rest[i - 1]));
+        }
+        return sell[prices.length - 1];
+    }
+}
+```
 
 
