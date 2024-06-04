@@ -582,6 +582,32 @@ class Solution {
 }
 ```
 
+this is the use of dynamic programming
+
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if(nums == null || nums.length == 0) return 0;
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, 1);
+
+        int res = 1;
+
+        for(int i = 1; i < nums.length; i++){
+            for (int j = 0; j < i; j++){
+                if (nums[i] > nums[j]){
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+
+            res = Math.max(res, dp[i]);
+        }
+
+        return res;
+    }
+}
+```
+
 ## Question 12 - 646. Maximum Length of Pair Chain
 
 
@@ -854,7 +880,146 @@ class Solution {
 }
 ```
 
+## Question 17 - 474. Ones and Zeroes
 
+```
+Input: strs = ["10","0001","111001","1","0"], m = 5, n = 3
+Output: 4
+Explanation: The largest subset with at most 5 0's and 3 1's is {"10", "0001", "1", "0"}, so the answer is 4.
+Other valid but smaller subsets include {"0001", "1"} and {"10", "1", "0"}.
+{"111001"} is an invalid subset because it contains 4 1's, greater than the maximum of 3.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/474.%20Ones%20and%20Zeroes)
+
+```java
+class Solution {
+    public int findMaxForm(String[] strs, int m, int n) {
+        int[][] dp = new int[m + 1][n + 1];
+
+        for(String str : strs){
+            int zeroCount = 0;
+            int oneCount = 0;
+            
+            for(char c : str.toCharArray()){
+                if(c == '0'){
+                    zeroCount++;
+                } else {
+                    oneCount++;
+                }
+            }
+
+            for(int i = m; i >= zeroCount; i--){
+                for(int j = n; j >= oneCount; j--){
+                    dp[i][j] = Math.max(dp[i][j], dp[i - zeroCount][j - oneCount] + 1);
+                }
+            }
+        }
+
+        return dp[m][n];
+    }
+}
+```
+
+## Question 18 - 139. Word Break
+
+The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words. Example 1:
+
+```
+Input: s = "leetcode", wordDict = ["leet", "code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+```
+```
+Example 2:
+
+Input: s = "applepenapple", wordDict = ["apple", "pen"]
+Output: true
+Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+             Note that you are allowed to reuse a dictionary word.
+```
+```
+Example 3:
+
+Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
+Output: false
+```
+
+## Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/139.%20Word%20Break)
+
+```java
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        Set<String> wordDictSet = new HashSet(wordDict);
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
+
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                // 有一次成功就可以退出这次循环了
+                if (dp[j] && wordDictSet.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+        return dp[s.length()];
+    }
+}
+```
+
+## Question 19 - 377. Combination Sum IV
+
+Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+
+```
+Example:
+
+nums = [1, 2, 3]
+target = 4
+
+The possible combination ways are:
+(1, 1, 1, 1)
+(1, 1, 2)
+(1, 2, 1)
+(1, 3)
+(2, 1, 1)
+(2, 2)
+(3, 1)
+Note that different sequences are counted as different combinations.
+
+Therefore the output is 7.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/377.%20Combination%20Sum%20IV)
+
+```java
+class Solution {
+    public int combinationSum4(int[] nums, int target) {
+        if(nums == null || nums.length == 0) return 0;
+
+        int[] res = new int[target + 1];
+        res[0] = 1;
+        
+        for(int i = 1; i < res.length; i++){
+            for(int num : nums){
+                if(i - num >= 0){
+                    res[i] += res[i - num];
+                }
+            }
+        }
+
+        return res[target];
+    }
+}
+```
 
 
 
