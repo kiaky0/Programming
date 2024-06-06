@@ -1090,10 +1090,13 @@ Output: 6
 
 ### Approach
 
+
 [Solution](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solutions/3667440/beats-100-c-java-python-beginner-friendly/)
 
-<div align="center"> <img src="https://github.com/kiaky0/Programming/assets/109141627/f4faec67-1331-46a5-95ab-030ed8c77232
-" width="350px"> </div><br>
+![image](https://github.com/kiaky0/Programming/assets/109141627/a100e349-a3fb-45e5-a066-47cf296f0fe2)
+
+
+<div align="center"> <img src="https://github.com/kiaky0/Programming/assets/109141627/a100e349-a3fb-45e5-a066-47cf296f0fe2" width="350px"> </div><br>
 
 ```java
 class Solution {
