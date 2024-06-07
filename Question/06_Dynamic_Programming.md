@@ -1276,10 +1276,134 @@ class Solution {
 }
 ```
 
+## Question 24 - 72. Edit Distance
 
 
+Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
+You have the following three operations permitted on a word:
 
+Insert a character
+Delete a character
+Replace a character
+ 
+```
+Example 1:
 
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation: 
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+Example 2:
+
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation: 
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+exection -> execution (insert 'u')
+```
+
+### Approach
+
+[video explaination](https://www.youtube.com/watch?v=MLBFJpDxjTA)
+
+[solution](https://www.jiakaobo.com/leetcode/72.%20Edit%20Distance.html)
+
+```java
+class Solution {
+    public int minDistance(String word1, String word2) {
+        int len1 = word1.length();
+        int len2 = word2.length();
+
+        // create 2D dp
+        int[][] dp = new int[len1+1][len2+1];
+        for(int i=1;i<=len1;i++){
+            dp[i][0]=i;
+        }
+        for(int j = 1; j <= len2; j++){
+            dp[0][j] = j;
+        }
+
+        for(int i=1; i<=len1; i++){
+            for(int j=1; j<=len2; j++){
+                char c1 = word1.charAt(i-1);
+                char c2 = word2.charAt(j-1);
+
+                if(c1==c2){
+                    dp[i][j] = dp[i-1][j-1];
+                }else{
+                    dp[i][j] = Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1])) + 1;
+                }
+            }
+        }
+        return dp[len1][len2];
+    }
+}
+```
+
+## Question 25 - 650. 2 Keys Keyboard
+
+```
+Example 1:
+
+Input: n = 3
+Output: 3
+Explanation: Initially, we have one character 'A'.
+In step 1, we use Copy All operation.
+In step 2, we use Paste operation to get 'AA'.
+In step 3, we use Paste operation to get 'AAA'.
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/650.%202%20Keys%20Keyboard)
+
+```java
+class Solution {
+    public int minSteps(int n) {
+        int dp[] = new int[n+1];
+
+        for(int i=2; i<=n; i++){
+            dp[i] = i;  // worst case
+
+            for(int j=i-1; j>1; j--){
+                int remain = i-j;
+                if(remain%j == 0){
+                    dp[i] = dp[j] + 1 + (remain/j);
+                    break;
+                }
+            }
+        }
+        return dp[n];
+    }
+}
+```
+
+- **Another Approach**
+
+```java
+class Solution {
+    public int minSteps(int n) {
+        int res = 0;
+        int factor = 2;
+
+        while (n > 1) {
+            while (n % factor == 0) {
+                res += factor;
+                n /= factor;
+            }
+
+            factor++;
+        }
+
+        return res;
+    }
+}
+```
 
 
