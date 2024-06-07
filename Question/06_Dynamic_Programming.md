@@ -4,7 +4,7 @@
 
 [Array Interval](#Array-Interval)
 
-[Sting](#String)
+[String](#String)
 
 # Fibonacci Sequence
 --------------------------------------------------------------------------------------------------
