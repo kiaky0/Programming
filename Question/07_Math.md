@@ -17,8 +17,9 @@ Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
 
 ![204](https://github.com/kiaky0/Programming/assets/109141627/c365e87d-a592-4178-bb91-9a45f797df33)
 
-```java
+- Start from 2, multiply of 2 all change to not prime number. Next 3, multiply of 3 change to not prime number. Next 4, but 4 is not prime.
 
+```java
 class Solution {
     public int countPrimes(int n) {
         boolean[] notPrime = new boolean[n];
@@ -36,3 +37,88 @@ class Solution {
     }
 }
 ```
+
+## Question 2 - 504. Base 7
+
+Given an integer num, return a string of its base 7 representation.
+
+```
+Example 1:
+
+Input: num = 100
+Output: "202"
+Example 2:
+
+Input: num = -7
+Output: "-10"
+```
+
+### Approach
+
+```java
+class Solution {
+    public String convertToBase7(int num) {
+        if(num==0) return "0";
+
+        StringBuilder sb = new StringBuilder();
+
+        if(num<0){ // when -ve value, make it into +ve
+            return "-" + convertToBase7(-num);
+        }
+        while(num !=0){
+            sb.append(num%7);
+        }
+        return sb.reverse().toString();
+    }
+}
+```
+
+simple way to solve
+
+```java
+class Solution {
+    public String convertToBase7(int num) {
+        return Integer.toString(num, 7);
+    }
+}
+```
+
+## Question 3 - 405. Convert a Number to Hexadecimal
+
+```
+Example 1:
+
+Input: num = 26
+Output: "1a"
+Example 2:
+
+Input: num = -1
+Output: "ffffffff"
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/405.%20Convert%20a%20Number%20to%20Hexadecimal)
+
+```java
+class Solution {
+    public String toHex(int num) {
+        char[] map = new char[]{'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
+        if(num == 0) return "0";
+
+        String res = "";
+        while(num != 0){
+            res= map[num & 15] + res;
+            num = (num >>> 4);
+        }
+
+        return res;
+    }
+}
+```
+
+
+
+
+
+
