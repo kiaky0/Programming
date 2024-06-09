@@ -247,6 +247,50 @@ class Solution {
 }
 ```
 
+## Question 7 - 415. Add Strings
+
+```
+Example 1:
+
+Input: num1 = "11", num2 = "123"
+Output: "134"
+Example 2:
+
+Input: num1 = "456", num2 = "77"
+Output: "533"
+```
+
+### Approach
+
+- similiar with question 6
+
+```java
+class Solution {
+    public String addStrings(String num1, String num2) {
+        StringBuilder result = new StringBuilder();
+        int i = num1.length() - 1;
+        int j = num2.length() - 1;
+        int carry=0;
+
+        while(i>=0 || j>=0 || carry != 0){
+            int sum = 0;
+            if(i>=0){
+                sum += (num1.charAt(i) - '0');
+                i--;
+            }
+            if(j>=0){
+                sum += (num2.charAt(j) - '0');
+                j--; 
+            }
+
+            sum += carry;
+            carry = sum/10;
+            result.append(sum%10);
+        }
+        return result.reverse().toString();
+    }
+}
+```
 
 
 
