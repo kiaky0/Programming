@@ -160,6 +160,98 @@ class Solution {
 }
 ```
 
+## Question 5 - 172. Factorial Trailing Zeroes
+
+```
+Example 1:
+
+Input: n = 3
+Output: 0
+Explanation: 3! = 6, no trailing zero.
+Example 2:
+
+Input: n = 5
+Output: 1
+Explanation: 5! = 120, one trailing zero.
+```
+
+### Approach
+
+[Solution Explaination](https://www.jiakaobo.com/leetcode/172.%20Factorial%20Trailing%20Zeroes.html)
+
+```java
+class Solution {
+    public int trailingZeroes(int n) {
+        int count = 0;
+        for(int i=5; n/i >=1; i*=5){
+            count += n/i;
+        }
+        return count;
+    }
+}
+```
+
+- Another approach
+
+```java
+class Solution {
+    public int trailingZeroes(int n) {
+        int count = 0;
+        while (n >= 5) {
+            n /= 5;
+            count += n;
+        }
+        return count;
+    }
+}
+```
+
+
+## Question 6 - 67. Add Binary
+
+```
+Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+Example 2:
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+```
+
+### Approach
+
+- Good Explaination in Leetcode:
+
+[Leetcode Solution](https://leetcode.com/problems/add-binary/solutions/3183205/1ms-beats-100-full-explanation-append-reverse-c-java-python3/)
+
+```java
+class Solution {
+    public String addBinary(String a, String b) {
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+
+        while(i>=0 || j>=0 || carry ==1){
+            if(i >=0)
+                carry += a.charAt(i--) - '0';
+            if(j >=0)
+                carry += b.charAt(j--) - '0';
+            sb.append(carry % 2);
+            carry /= 2;
+        }
+        return sb.reverse().toString();
+    }
+}
+```
+
+
+
+
+
+
 
 
 
