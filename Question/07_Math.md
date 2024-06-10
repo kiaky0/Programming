@@ -292,7 +292,41 @@ class Solution {
 }
 ```
 
+## Question 8 - 462. Minimum Moves to Equal Array Elements II
 
+Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+
+In one move, you can increment or decrement an element of the array by 1.
+
+```
+Example 1:
+
+Input: nums = [1,2,3]
+Output: 2
+Explanation:
+Only two moves are needed (remember each move increments or decrements one element):
+[1,2,3]  =>  [2,2,3]  =>  [2,2,2]
+```
+
+### Approach
+
+[Solution](https://www.jiakaobo.com/leetcode/462.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20II.html)
+
+```java
+class Solution {
+    public int minMoves2(int[] nums) {
+        Arrays.sort(nums);
+        int mid = nums[nums.length / 2];
+
+        int sum = 0;
+        for(int num : nums){
+            sum += Math.abs(num - mid);
+        }
+
+        return sum;
+    }
+}
+```
 
 
 
