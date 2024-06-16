@@ -1,5 +1,6 @@
 # Math
 
+[Square](#Square)
 
 ## Question 1 - 204. Count Primes
 
@@ -359,4 +360,61 @@ class Solution {
     }
 }
 ```
+
+# Square
+
+## Question 10 - 367. Valid Perfect Square
+
+```
+Example 1:
+
+Input: num = 16
+Output: true
+Explanation: We return true because 4 * 4 = 16 and 4 is an integer.
+Example 2:
+
+Input: num = 14
+Output: false
+Explanation: We return false because 3.742 * 3.742 = 14 and 3.742 is not an integer.
+```
+
+### Approach
+
+[leetcode Solution](https://leetcode.com/problems/valid-perfect-square/solutions/4982347/beats-100-time-o-log-n-space-o-1-math-easy-explained/)
+
+**Using Binary Search**
+
+
+1. Binary Search: We initialize two pointers, l and r, representing the lower and upper bounds of the search range, respectively. Initially, l is set to 1 and r is set to the given number num.
+2. We perform binary search within the range [l, r]. At each step, we calculate the mid value as mid = l + (r - l) / 2.
+3. If the square of mid is equal to num, we return true, indicating that num is a perfect square.
+4. If the square of mid is greater than num, we update r to mid - 1 to search in the left half of the range.
+5. If the square of mid is less than num, we update l to mid + 1 to search in the right half of the range.
+6. We continue this process until l becomes greater than r, indicating that the search space is exhausted.
+7. If we do not find any perfect square during the search, we return false.
+
+```java
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        long l = 1, r = num;
+
+        while(l <= r){
+            long mid = l+ (r-l)/2;
+            if(mid*mid == num) return true;
+            else if(mid*mid > num)
+                r= mid -1;
+            else
+                l = mid + 1;
+        }
+        return false;
+    }
+}
+```
+
+
+
+
+
+
+
 
