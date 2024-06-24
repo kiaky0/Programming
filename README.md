@@ -11,3 +11,10 @@
 
 [Content](https://github.com/kiaky0/Programming/blob/main/Question/0_Table_Contain.md)
 
+
+# AI
+
+## 💻 Python Programming
+
+[Content]()
+
