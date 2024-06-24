@@ -14,7 +14,7 @@
 
 # AI
 
-## 💻 Python Programming
+## 💻 Python Programming and AI
 
-[Content]()
+[Content for UTAR learning]([https://github.com/kiaky0/python_learning/tree/main/UTAR_AI](https://github.com/kiaky0/python_learning/blob/main/README.md))
 
