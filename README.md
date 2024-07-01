@@ -1,7 +1,7 @@
 # Programming
 
 ## 📓 Note
-Y2S3: [UTAR Note](https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE)
+Y2S3: [UTAR Note Y2S3]([https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE](https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE/Y2S3))
 
 
 ## ✏️ Calculation & Algorithm
