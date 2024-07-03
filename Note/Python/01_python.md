@@ -179,6 +179,145 @@ func (intval, strval)
 print ("main (after calling func): numval = {}, strval = {}".format(intval, strval))
 ```
 
+### Setting Default Arguement
+
+```py
+def printinfo(name, age = 35):
+    "This prints a passed info into this function"
+    print ("Name: ", name)
+    print ("Age: ", age)
+
+printinfo (name = "Suzuki")	
+printinfo (name = "Michiko", age = 12)
+```
+output
+```
+Name:  Suzuki
+Age:  35
+Name:  Michiko
+Age:  12
+```
+
+
+# Condition Staetement and Loop
+
+```py
+price = float(input('how much is one apple? '))
+print(price)
+if price < 2.00:
+    print (price, 'is cheap, I should buy more')
+elif price < 4.0:
+    print (price, 'is not cheap, I should buy less')
+else:
+    print (price, 'is too expensive, I cannot afford it')
+```
+
+### for in Loop
+
+For number
+```py
+for num in [1, 2, 3, 4, 5]:
+    print (num)
+```
+output
+```
+1
+2
+3
+4
+5
+```
+For String
+```py
+for name in ['lessie', 'joe', 'bob']:
+    print (name)
+```
+output
+```
+lessie
+joe
+bob
+```
+
+### range
+
+- `range(end)`
+
+```py
+for num in range(5):        
+    print (num)
+```
+output
+```
+0
+1
+2
+3
+4
+```
+
+- `range(start,end)`
+
+```py
+for num in range(3,7):     
+    print (num)
+```
+output
+```
+3
+4
+5
+6
+```
+
+- `range(start,end,skip)`
+
+```py
+for num in range(10,26,5):  
+    print (num)
+```
+output
+```
+10
+15
+20
+25
+```
+
+### **The `enumerate` command**
+
+- while using `enumerate()` function, it show the index
+
+```py
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print (i, v)
+```
+output
+```
+0 tic
+1 tac
+2 toe
+```
+
+
+### while loop
+
+```py
+num = 1
+while num <= 5:
+    print (num)
+    num += 1
+```
+output
+```
+num = 1
+while num <= 5:
+    print (num)
+    num += 1
+```
+
+
+
 
 
 
