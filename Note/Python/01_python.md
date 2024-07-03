@@ -32,4 +32,12 @@ log of 100 is  4.605170185988092
 
 Like Java, Python has a built in string type. 
 * You can use either a single quote (`'`)  or double quote (`"`) to define a string.
-* The  `+` operator is overloaded to do string concatenation on string values. 
+* The  `+` operator is overloaded to do string concatenation on string values.
+
+There are many built-in function that comes with a string variable.
+
+**Tips**: *To see the list of functions provided by a library or string, type the name and then press TAB. For example, if you type  `s.<TAB>` to see the list of built-in functions:
+
+![listcmd.jpg](attachment:listcmd.jpg)
+
+The following coded show how to use several built-in functions to manipulate a string.
