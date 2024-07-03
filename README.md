@@ -1,7 +1,7 @@
 # Programming
 
 ## 📓 Note
-Y2S3: [UTAR Note Y2S3]([https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE](https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE/Y2S3))
+- Y2S3: [UTAR Note Y2S3](https://github.com/kiaky0/Programming/tree/main/UTAR_NOTE/Y2S3))
 
 
 ## ✏️ Calculation & Algorithm
@@ -9,7 +9,7 @@ Y2S3: [UTAR Note Y2S3]([https://github.com/kiaky0/Programming/tree/main/UTAR_NOT
 
 ## 🔎 Question
 
-Leetcode Question & Solution: [Leetcode Solution](https://github.com/kiaky0/Programming/tree/main/Question)
+- Leetcode Question & Solution: [Leetcode Solution](https://github.com/kiaky0/Programming/tree/main/Question)
 
 
 # AI
@@ -18,7 +18,7 @@ Leetcode Question & Solution: [Leetcode Solution](https://github.com/kiaky0/Prog
 
 1. Python Note Making 2024 --> [pyGate](https://github.com/kiaky0/Programming/tree/main/Note/Python)
 
-[Content for UTAR learning](https://github.com/kiaky0/python_learning/blob/main/README.md)
+- [Content for UTAR learning](https://github.com/kiaky0/python_learning/blob/main/README.md)
 
 # Front End Development
 
