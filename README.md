@@ -16,6 +16,8 @@ Leetcode Question & Solution: [Leetcode Solution](https://github.com/kiaky0/Prog
 
 ## 💻 Python Programming and AI
 
+1. Python Note Making 2024 [pyGate](https://github.com/kiaky0/Programming/tree/main/Note/Python)
+
 [Content for UTAR learning](https://github.com/kiaky0/python_learning/blob/main/README.md)
 
 # Front End Development
