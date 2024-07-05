@@ -508,8 +508,17 @@ d3     # {'joe': 42.0, 'mary': 56.0}
 ```
 
 
+# List Comprehension
 
 
+Concise way to create a list
+
+```py
+squares = []
+for x in range(10):
+    squares.append (x**2)
+print(squares)        # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
 
 
 
