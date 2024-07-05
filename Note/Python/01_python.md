@@ -416,15 +416,96 @@ print(b == a)  # True
 ```
 
 
+## Tuple
+
+It is immutable once declared
+
+```py
+pair = (3,5)
+print(pair)     # (3, 5)
+print(pair[0])  # 3
+```
+
+## Set
+
+Unorder list with **no duplicate items**
+
+```py
+shapes = ['circle','square','triangle','circle']
+setOfShapes = set(shapes)
+setOfShapes  # {'circle', 'square', 'triangle'}    <--- ordered
+
+setOfShapes.add('polygon') 
+setOfShapes.add ('circle')
+setOfShapes.add('triangle')
+print(setOfShapes)       # {'triangle', 'square', 'circle', 'polygon'}  <--- unordered if using print
+```
+
+Check if exist in set
+
+```py
+if 'circle' in setOfShapes:
+    print ('circle exists in setOfShapes')
+else:
+    print ('circle does not exist in setOfShapes')
+    
+if 'rhombus' in setOfShapes:
+    print ('rhombus exists in setOfShapes')
+else:
+    print ('rhombus does not exist in setOfShapes')
+```
+
+Operation on set
+
+```py
+favoriteShapes = ['circle','triangle','hexagon']
+setOfFavoriteShapes = set(favoriteShapes)
+print ('setOfShapes:         ', setOfShapes)
+print ('setOfFavoriteShapes: ', setOfFavoriteShapes)
+print ()
+
+print('setOfShapes - setOfFavoriteShapes:', setOfShapes - setOfFavoriteShapes)
+print('setOfShapes & setOfFavoriteShapes:', setOfShapes & setOfFavoriteShapes)
+print('setOfShapes | setOfFavoriteShapes:', setOfShapes | setOfFavoriteShapes)
+```
+output
+```
+setOfShapes:          {'triangle', 'square', 'circle', 'polygon'}
+setOfFavoriteShapes:  {'triangle', 'hexagon', 'circle'}
+
+setOfShapes - setOfFavoriteShapes: {'square', 'polygon'}
+setOfShapes & setOfFavoriteShapes: {'circle', 'triangle'}
+setOfShapes | setOfFavoriteShapes: {'circle', 'hexagon', 'square', 'triangle', 'polygon'}
+```
 
 
+## Dictionary
 
 
+The last built-in data structure is the dictionary which stores a map from one type of object (the `key`) to another (the `value`). 
+
+* The `key` must be an immutable type (string, number, or tuple). 
+* The `value` can be any Python data type.
 
 
+Creating a dictionary
 
+```py
+studentIds = {'joe': 42.0, 'mary': 56.0}
+studentIds     # {'joe': 42.0, 'mary': 56.0}
 
+d1 = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+d1     # {'sape': 4139, 'guido': 4127, 'jack': 4098}
 
+d2 = dict(sape=4139, guido=4127, jack=4098)
+d2     # {'sape': 4139, 'guido': 4127, 'jack': 4098}
+
+# Used of different list
+namelist = ['joe', 'mary']
+Ids = [42.0, 56.0]
+d3 = {name: age for name, age in zip(namelist, Ids)}
+d3     # {'joe': 42.0, 'mary': 56.0}
+```
 
 
 
