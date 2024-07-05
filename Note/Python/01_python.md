@@ -316,6 +316,22 @@ What is your quest?  It is the holy grail.
 What is your favorite color?  It is blue.
 ```
 
+another example of zip command
+
+```py
+names = ['Krishnan', 'Shafie', 'Kim Loong']
+grades = [99, 100, 89]
+
+for n, g in zip(names, grades):
+    print ('{0}: {1}.'.format(n, g))
+```
+output
+```
+Krishnan: 99.
+Shafie: 100.
+Kim Loong: 89.
+```
+
 ### while loop
 
 ```py
@@ -330,6 +346,73 @@ num = 1
 while num <= 5:
     print (num)
     num += 1
+```
+
+# Build In Data Structure
+
+- list
+- tuple
+- set
+- dictionary
+
+## List
+
+```py
+fruits = ['apple','orange','pear']   # a list of strings
+print (fruits)      
+
+numbers = [11,12,13,14]              # a list of integers
+print(numbers)
+
+isHandsome = [True, False, True]       # a list of booleans
+print(isHandsome)
+
+rojak = [11, 'hello', True, [1,2,3], ['one', 2, False]]     # a list of different types of items
+print(rojak)
+
+
+# get the length of list
+len(numbers)    # 4
+```
+
+Slice Indexing: accessing a range of item in the list
+
+```py
+print(allFruits)    # print all items
+print(allFruits[0:2])  # items 0 and 1 (not including 2)
+print(allFruits[:3])   # first item to item 2 (not including 3)
+print(allFruits[2:])   # items 2 to last item
+```
+
+nnegative indexing
+
+```py
+allFruits[-3:]       # Start from the third last item to the end of the list
+allFruits[-3:-1]     # Start from the third last item to the second last item of the list
+```
+
+### Reference vs Copy
+
+Using the command of `.copy()`
+
+```py
+colours1 = ["red", "green"]
+colours2 = colours1   # rferencing, change in colour2 will affect the previous one
+colours2 = colours1.copy()   # copy  # change in the colour2 will not affect the previous one
+```
+
+### Difference between == and is statement
+
+* **The operator `is`** checks if two variables are referencing the same list or object. 
+* **The operator `==`** checks if the lists have the same content.
+
+Example
+
+```py
+a = [1, 2, 3]
+b = a.copy()
+print(b is a)  # False 
+print(b == a)  # True
 ```
 
 
