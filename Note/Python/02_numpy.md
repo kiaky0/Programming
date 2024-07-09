@@ -249,4 +249,120 @@ array([13, 45])
 array([10, 25, 23])
 ```
 
+## Indexing, Slicing and Iterating
+
+Simple Indexing and Slicing
+
+```py
+a = np.random.randint(0, 100, 10)
+print(a)        # [28 79 74 53 91 34 58 73 43 49]
+
+a[2]              # get item 2
+a[2:5]           # start = 2, end = 5 (not inclusive). This gets item 2 up to item 4
+a[:3]           # equivalent to a[0:3]
+a[7:]           # gets item at position 7 to the last position
+a[2] = -1         # overwritting the third item
+a[::2] = -1000    # equivalent to a[0:10:2] = -1000   output---> [-1000,    79, -1000,    53, -1000,    34, -1000,    73, -1000,
+          49]
+
+```
+
+Negative Indexing
+
+```py
+a = np.random.randint(0, 100, 10)
+a[-1]   # take the last value
+a[-3:]             # get the last three items
+```
+
+Multidimensional indexing
+
+```py
+a = np.random.randint(0, 100, (3, 5))
+print(a)
+```
+output
+
+```
+[[86, 93, 62, 23, 37],
+[ 7, 31, 51, 22, 69],
+[23, 16, 18, 51, 30]]
+```
+
+```py
+a[2, 3]               # item at row 2, column 3 (third row, fourth column)
+a[:, 1]               # get the column 1 of a
+a[:2, 1]              # first two items in column 1 of a
+a[:, 1:3]            # get column 1 and 2 (not inclusive of 3)
+a[2]              # get row 2
+a[1:]             # get row 1 to the last row
+```
+
+### Indexing with Integer Arrays
+
+```py
+a = np.array([10, 11, 13,  0, 10, 10, 16, 12, 18,  9])
+
+selected = [2, 3, 5]   #select third, fourth and sixth item from array
+b = a[selected]
+print(b)  # [13,  0, 10]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
