@@ -409,6 +409,17 @@ array([[1, 2],
 
 ```
 
+Copy
+
+```py
+a = np.arange(15).reshape(3, 5) 
+d = a.copy()
+
+d is a                                # d is not the same as a
+# False
+```
+
+
 
 
 
