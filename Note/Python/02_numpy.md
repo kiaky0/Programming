@@ -308,6 +308,112 @@ b = a[selected]
 print(b)  # [13,  0, 10]
 ```
 
+indexing a 2-D array
+
+```py
+a = np.array([[2, 5, 1, 1, 2],
+              [5, 7, 2, 7, 35],
+              [1, 9, 8, 49, 9]])
+
+selected_row = (2, 1)
+selected_col = (3, 4)
+
+b = a[selected_row, selected_col]              # extracts item at location (2, 3) and (1, 4)
+print(b)      # [49, 35]
+```
+
+### Indexing with Boolean Arrays
+
+```py
+a = np.array([23, -56, 2, 3, -57])
+
+selected = [True, False, True, False, False]
+print(a[selected])    # [23,  2]
+```
+
+# Matrix Computation
+
+```py
+A = np.array([[1, 0], [2, 5], [3, 1]], dtype = 'int')
+print(A)
+
+B = np.array([[4, 0.5], [2, 5], [0, 1]], dtype = 'int')
+print(B)
+```
+
+output
+
+```
+[[1 0]
+ [2 5]
+ [3 1]]
+[[4 0]
+ [2 5]
+ [0 1]]
+```
+
+Matrix plus and minus
+
+`A+B`,`A-B`
+
+Matrix multiplication
+
+`np.dot()`
+
+```py
+m1 = np.array([[1, 2],[1, 4]])
+print (m1)
+
+m2 = np.array([[0, 1],[1, 2]])
+print (m2)
+
+np.dot(m1, m2)                     # matrix matrix multiplication
+```
+
+# Copy and Views
+
+
+```py
+a = np.arange(12)
+print("a = ", a)     # a =  [ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+b = a
+print("b = ", b)     # b =  [ 0  1  2  3  4  5  6  7  8  9 10 11]
+b is a                   # for simple assignment, a and b are two names for the same ndarray objectf
+# True
+```
+
+Note: Changing the content of a will affects the content of b
+
+View copy
+
+```py
+a = np.array([[1, 2, 3],[4, 5, 6]])
+a
+###
+array([[1, 2, 3],
+       [4, 5, 6]])
+###
+
+b = a.ravel()
+b               # array([1, 2, 3, 4, 5, 6])
+
+c = a.reshape(3, 2)
+c
+
+###
+array([[1, 2],
+       [3, 4],
+       [5, 6]])
+###
+
+```
+
+
+
+
+
+
 
 
 
