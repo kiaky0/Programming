@@ -144,6 +144,13 @@ This is <ins>ins<ins/> text <br>
 This is <del>del</del> text <br>
 
 
+<dl>
+   <dt>Milk</dt>
+   <dd>A white color cold drink</dd>
+   <dt>Coca ColaM</dt>
+    <dd>A dark brown color soft/fizzy drink</dd>
+</dl>
+
 
 
 
