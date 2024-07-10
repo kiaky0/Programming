@@ -199,9 +199,6 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ![image](https://github.com/kiaky0/Programming/assets/109141627/b0f862e6-b0e8-4133-94b5-c52099b6c414)
 
-![image](https://github.com/kiaky0/Programming/assets/109141627/599c65f4-f165-4332-aa16-812e3b191f24)
-
-
 ## Some tag 
 
 ```html
