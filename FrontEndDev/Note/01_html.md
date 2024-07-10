@@ -75,7 +75,7 @@ Example
 </dl>
 ```
 
-result
+- result
 
 <dl>
    <dt>Milk</dt>
@@ -83,6 +83,11 @@ result
    <dt>Coca ColaM</dt>
     <dd>A dark brown color soft/fizzy drink</dd>
 </dl>
+
+## Table
+
+- `<td>` ---> table data
+- `<tr>` ---> table row
 
 
 ## Linking
