@@ -4,10 +4,10 @@
 
 | tag          |  describtion |
 | --------------- | ------------ |
-| <h1>  | heading |
-| <p>    | paragraph    |
-| <pre> | preserving white space |
-| <a>    | attribute    |
+| <h1>       | heading |
+| <p>        | paragraph    |
+| <pre>      | preserving white space |
+| <a>        | attribute    |
 | | |
 
 
