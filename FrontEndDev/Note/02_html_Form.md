@@ -2,8 +2,6 @@
 
 ## HTML input type
 
-
-
 ```html
 <input type="button">
 <input type="checkbox">
@@ -92,6 +90,13 @@ Example code
 ```
 
 ![image](https://github.com/kiaky0/Programming/assets/109141627/78b52166-e3db-4233-9f0c-b68b4c41aba7)
+
+More information: [W3 School](https://www.w3schools.com/html/html_form_elements.asp)
+
+**HTML Form Element**
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/4bf62986-6920-4e06-96cd-09af660edf56)
+
 
 <br>
 
