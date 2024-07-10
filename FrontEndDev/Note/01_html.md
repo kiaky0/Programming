@@ -104,6 +104,9 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ![image](https://github.com/kiaky0/Programming/assets/109141627/ebe35ac7-3b80-4d2b-8095-11add000b5d1)
 
+![image](https://github.com/kiaky0/Programming/assets/109141627/96e20bad-f8ba-4ac7-9fac-db4c6cf2ae77)
+
+
 <img align="centre" src="https://github.com/kiaky0/Programming/assets/109141627/ebe35ac7-3b80-4d2b-8095-11add000b5d1">
 
 
