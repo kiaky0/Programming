@@ -12,19 +12,9 @@
 | ins | text underline |
 | hr | horizontal rule |
 | em | emphasized text |
-
-This is <b>bold</b> text
-This is <em>emphasized</em> text
-This is <i>italic</i> text
-This is <small>small</small> text
-This is <strong>strong</strong> text
-This is <sub>sub</sub> text
-This is <sup>sup</sup> text
-This is <ins>ins<ins/> text
-This is <del>del</del> text
-
-
-
+| i | italic text | 
+| small | small text |
+| b | bold |
 
 
 
@@ -129,6 +119,29 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 ![image](https://github.com/kiaky0/Programming/assets/109141627/599c65f4-f165-4332-aa16-812e3b191f24)
 
 
+## Some tag 
+
+```html
+This is <b>bold</b> text
+This is <em>emphasized</em> text
+This is <i>italic</i> text
+This is <small>small</small> text
+This is <strong>strong</strong> text
+This is <sub>sub</sub> text
+This is <sup>sup</sup> text
+This is <ins>ins<ins/> text
+This is <del>del</del> text
+```
+
+This is <b>bold</b> text <br>
+This is <em>emphasized</em> text <br>
+This is <i>italic</i> text <br>
+This is <small>small</small> text <br>
+This is <strong>strong</strong> text <br>
+This is <sub>sub</sub> text <br>
+This is <sup>sup</sup> text <br> 
+This is <ins>ins<ins/> text <br>
+This is <del>del</del> text <br>
 
 
 
