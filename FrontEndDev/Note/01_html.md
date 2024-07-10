@@ -56,6 +56,35 @@ Order list with start and type attributes
 </ol>
 ```
 
+Description List
+
+```
+<dl> tag defines the description list. 
+<dt> defines terms/names 
+<dd> describes each term/name
+```
+
+Example
+
+```html
+<dl>
+   <dt>Milk</dt>
+   <dd>A white color cold drink</dd>
+   <dt>Coca ColaM</dt>
+    <dd>A dark brown color soft/fizzy drink</dd>
+</dl>
+```
+
+result
+
+<dl>
+   <dt>Milk</dt>
+   <dd>A white color cold drink</dd>
+   <dt>Coca ColaM</dt>
+    <dd>A dark brown color soft/fizzy drink</dd>
+</dl>
+
+
 ## Linking
 
 - a web page or location within a web page
@@ -144,12 +173,7 @@ This is <ins>ins<ins/> text <br>
 This is <del>del</del> text <br>
 
 
-<dl>
-   <dt>Milk</dt>
-   <dd>A white color cold drink</dd>
-   <dt>Coca ColaM</dt>
-    <dd>A dark brown color soft/fizzy drink</dd>
-</dl>
+
 
 
 
