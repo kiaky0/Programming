@@ -197,7 +197,8 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 ## Special character
 
-![image](https://github.com/kiaky0/Programming/assets/109141627/b0f862e6-b0e8-4133-94b5-c52099b6c414)
+<img align="centre" src="https://github.com/kiaky0/Programming/assets/109141627/b0f862e6-b0e8-4133-94b5-c52099b6c414">
+
 
 ## Some tag 
 
