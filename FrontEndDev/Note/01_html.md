@@ -3,7 +3,7 @@
 
 
 | tag          |  describtion |
-| ------------ | ------------ |
+| --------------- | ------------ |
 | <h1>  | heading |
 | <p>    | paragraph    |
 | <pre> | preserving white space |
