@@ -5,9 +5,9 @@
 | tag          |  describtion |
 | --- | --- |
 | h1       | heading |
-| <p>        | paragraph    |
-| <pre>      | preserving white space |
-| <a>        | attribute    |
+| p        | paragraph    |
+| pre     | preserving white space |
+| a       | attribute    |
 | | |
 
 
