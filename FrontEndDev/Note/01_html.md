@@ -102,9 +102,9 @@ As soon as the browser downloads the HTML, the browser will start to display the
 Once the image is loaded, the browser adds the image to the page. Because the image takes up space, the browser has to move the text down the page, to fit the image above it:
 
 
+![image](https://github.com/kiaky0/Programming/assets/109141627/ebe35ac7-3b80-4d2b-8095-11add000b5d1)
 
-
-<img align="centre" src="https://github.com/kiaky0/Programming/assets/109141627/16b6abd9-b07a-4970-920a-c28573b8ce71">
+<img align="centre" src="https://github.com/kiaky0/Programming/assets/109141627/ebe35ac7-3b80-4d2b-8095-11add000b5d1">
 
 
 
