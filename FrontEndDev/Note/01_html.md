@@ -10,6 +10,21 @@
 | a       | attribute    |
 | del | defines text that has been deleted |
 | ins | text underline |
+| hr | horizontal rule |
+| em | emphasized text |
+
+This is <b>bold</b> text
+This is <em>emphasized</em> text
+This is <i>italic</i> text
+This is <small>small</small> text
+This is <strong>strong</strong> text
+This is <sub>sub</sub> text
+This is <sup>sup</sup> text
+This is <ins>ins<ins/> text
+This is <del>del</del> text
+
+
+
 
 
 
@@ -107,6 +122,11 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 
 
+## Special character
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/b0f862e6-b0e8-4133-94b5-c52099b6c414)
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/599c65f4-f165-4332-aa16-812e3b191f24)
 
 
 
