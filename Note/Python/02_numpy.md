@@ -419,9 +419,68 @@ d is a                                # d is not the same as a
 # False
 ```
 
+<br>
 
+## Manipulating Arrays
 
+`hstack`
 
+```py
+a = np.array([[1,2,3], [4,5,6]])
+b = np.array([[23,23,34], [43,54,63]])
+c = np.hstack((a,b))
+```
+
+output
+
+```
+array([[ 1,  2,  3, 23, 23, 34],
+       [ 4,  5,  6, 43, 54, 63]])
+```
+
+`vstack`
+
+```py
+d = np.vstack((a,b))
+```
+
+output
+
+```
+array([[ 1,  2,  3],
+       [ 4,  5,  6],
+       [23, 23, 34],
+       [43, 54, 63]])
+```
+
+## Array Broadcasting
+
+```py
+a = np.array([1, 2, 3])
+b = 2
+a * b    # [2, 4, 6]
+```
+
+another example
+
+```py
+a = np.array([[ 0,  0,  0],
+           [10, 10, 10],
+           [20, 20, 20],
+           [30, 30, 30]])
+
+b = np.array([0, 1, 2])
+a + b
+```
+
+output
+
+```
+array([[ 0,  1,  2],
+       [10, 11, 12],
+       [20, 21, 22],
+       [30, 31, 32]])
+```
 
 
 
