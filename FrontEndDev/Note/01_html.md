@@ -22,6 +22,8 @@
     <img src="https://github.com/kiaky0/Programming/assets/109141627/f0f311d1-abe3-45d4-8d31-64374ae1cdb4" width="700px">
 </div>
 
+<br>
+
 ## Table and list
 
 
@@ -84,6 +86,8 @@ Example
     <dd>A dark brown color soft/fizzy drink</dd>
 </dl>
 
+<br>
+
 ## Table
 
 - `<td>` ---> table data
@@ -142,6 +146,8 @@ Example
 <a href = "mailto:salsalbilal@utar.edu.my">UTAR EMAIL</a>
 ```
 
+<br>
+
 ## Image
 
 ```html
@@ -184,7 +190,7 @@ Once the image is loaded, the browser adds the image to the page. Because the im
 
 <img align="centre" src="https://github.com/kiaky0/Programming/assets/109141627/ebe35ac7-3b80-4d2b-8095-11add000b5d1">
 
-
+<br>
 
 ## Special character
 
