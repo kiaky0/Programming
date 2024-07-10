@@ -3,6 +3,7 @@
 
 
 | <h1> |  heading |
+| :---: | :----: |
 | <p>   | paragraph |
 
 
