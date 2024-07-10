@@ -29,6 +29,9 @@
 <input type="week">
 ```
 
+Example code
+
+```html
 <form action="/action_page.php">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="John"><br>
@@ -38,3 +41,58 @@
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+```
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/315a377c-b11a-4fe6-a0eb-5c2ead33f943)
+
+<br>
+
+## Target Attribute
+
+
+| Value | Description |
+| --- | --- |
+| _blank | open in new tab |
+| _self | open in current window |
+| _parent | display in parent frame |
+| _top | display in the full body of the window |
+| framename | displayed in named iframe |
+
+<br>
+
+## Form Element
+
+```html
+<input>
+<label>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+```
+
+Example code
+
+```html
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+```
+
+![image](https://github.com/kiaky0/Programming/assets/109141627/78b52166-e3db-4233-9f0c-b68b4c41aba7)
+
+<br>
+
+
