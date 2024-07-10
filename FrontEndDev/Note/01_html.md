@@ -94,6 +94,9 @@ Example
 - `<tr>` ---> table row
 - `<td>` ---> table head
 
+-  `colspan`  ---> column take
+-  `rowspan`  ---> row take
+
 Example
 
 ```html
