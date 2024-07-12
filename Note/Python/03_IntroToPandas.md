@@ -120,11 +120,88 @@ print(df)
 
 ![image](https://github.com/user-attachments/assets/d8f22d84-b2aa-4e24-8aff-8f266ab0f7ef)
 
-Specify the index row and column name
+Specify the index row and column name, using `index = []` and `column = []`
 
 ```py
 df = pd.DataFrame(np.random.randn(6,4), index = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6'], columns = ['c1', 'c2', 'c3', 'c4'])
 ```
+
+<br>
+
+Example of creating dataframe
+
+```py
+data = {'year': [2000, 2001, 2003, 2004, 2005],
+        'state': ['Yokohama', 'Tokyo', 'Kyoto', 'Hokaido', 'Osaka'],
+        'population': [1.5, 1.7, 3.6, 2.4, 2.9] }
+
+df = pd.DataFrame(data, index = ['1st', '2nd', '3rd', '4th', '5th'])
+df
+```
+
+![image](https://github.com/user-attachments/assets/8e5c5c4e-a2ba-46f0-a6a8-2e2e544433f4)
+
+Using `<DataFrame>.dtypes`
+
+```py
+df.dtypes
+```
+
+- result
+
+```
+state          object
+year            int64
+population    float64
+dtype: object
+```
+
+<br>
+
+### Accessing items in a DataFrame
+
+Command `.at[row_index, column_index]`
+
+```py
+df.at['5th','state']         # Indexing order: [row, column]
+df.at['5th', 'state'] = 'Nagasaki'     # Change the value at the index order to Nagasaki
+```
+
+Command `.iat[row_position, column_position]`
+
+```py
+df.iat[4, 0]             # Indexing order: [column, row]
+df.iat[4, 0] = 'Osaka'
+```
+
+### Accessing a single column
+
+```py
+df['yeaer']    # # access column 'year' by dict-like notation
+```
+- result
+
+```
+1st    2000
+2nd    2001
+3rd    2003
+4th    2004
+5th    2005
+Name: year, dtype: int64
+```
+
+<br>
+
+Modify the content in the column using numpy
+
+```py
+df['year'] = np.arange(2010, 2015)   # modifies the content of column 'year'
+df
+```
+- result in the year become accending order from 2010 to 2015
+
+
+
 
 
 
