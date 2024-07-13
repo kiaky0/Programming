@@ -1,7 +1,7 @@
 Content
 
 - [Form](#Form)
-- [<ultimedia](#Multimedia)
+- [Multimedia](#Multimedia)
 
 
 # Form
@@ -175,7 +175,7 @@ More Video Feature
 
 ```
 
-[Learn More](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#other_video_features)
+[Learn More](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Other_video_features)
 
 
 
