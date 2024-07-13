@@ -153,6 +153,19 @@ Paragraph inside the video tag
 
 <br>
 
+AutoPlay
+
+```html
+<video controls poster="video.jpg"
+	width="160" height="150" autoplay loop>
+	<source src="video.m4v" type="video/mp4">
+	<source src="video.ogv" type="video/ogg">
+	<a href="sparky.mov">Sparky the Dog</a>
+</video>
+```
+
+<br>
+
 More Video Feature
 
 ```html
@@ -175,7 +188,8 @@ More Video Feature
 
 ```
 
-[Learn More](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Other_video_features)
+---> [Learn More Gate](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Other_video_features)
 
+---> [Advance Audio and Video Delivery](https://developer.mozilla.org/en-US/docs/Web/Media/Audio_and_video_delivery)
 
 
