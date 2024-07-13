@@ -1,3 +1,9 @@
+Content
+
+- [Form](#Form)
+- [<ultimedia](#Multimedia)
+
+
 # Form
 
 ## HTML input type
@@ -99,5 +105,77 @@ More information: [W3 School](https://www.w3schools.com/html/html_form_elements.
 
 
 <br>
+
+<hr>
+
+# Multimedia
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simple video example</title>
+  </head>
+  <body>
+    <h1>Below is a simple video example</h1>
+
+    <video src="rabbit320.webm" controls>
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p> 
+    </video>
+  </body>
+</html>
+```
+
+output
+
+![image](https://github.com/user-attachments/assets/7e44cb15-3d20-43b0-a848-dc00e9164cbf)
+
+
+Explaination:
+
+_The paragraph inside the `<video>` tags._ This is called fallback content — this will be displayed if the browser accessing the page doesn't support the `<video>` element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.
+
+
+
+Paragraph inside the video tag
+
+```html
+<video src="rabbit320.webm" controls>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.webm">link to the video</a> instead.
+  </p>
+</video>
+
+```
+
+<br>
+
+More Video Feature
+
+```html
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
+</video>
+
+```
+
+[Learn More](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#other_video_features)
+
 
 
