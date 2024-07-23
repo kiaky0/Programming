@@ -230,7 +230,31 @@ animation-iteration-count: infinite;   ---> the animation will run infinitely
 [learn more](https://www.w3schools.com/css/css3_animations.asp）
 
 
+## CSS Transition
 
+- transition
+- transition-delay
+- transition-duration
+- transition-property
+- transition-timing-function
+
+
+```html
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+div:hover {
+  width: 300px;
+}
+</style>
+```
+
+`transition-delay: 1s;` : delay the starting time of the transition
 
 
 
