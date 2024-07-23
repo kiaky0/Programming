@@ -75,10 +75,10 @@ background-color: hsl(95, 57%, 55%);
 Property:
 
 <ol type='I'>
-  <li>Horizontal offset of the shadow: +ve value the box shadow will appear to left. -ve value the box shadow appear to the right </li>
-  <li>Vertical offset of the shadow: -ve shadow move up. -ve the shadow move down</li>
-  <li>Blur radius: 0px will result in sharp edge. The greater the value the more the edges of the shadow are blurred</li>
-  <li>Color: The box-shadow color</li>
+  <li>**Horizontal offset of the shadow:** +ve value the box shadow will appear to left. -ve value the box shadow appear to the right </li>
+  <li>**Vertical offset of the shadow:** -ve shadow move up. -ve the shadow move down</li>
+  <li>**Blur radius:** 0px will result in sharp edge. The greater the value the more the edges of the shadow are blurred</li>
+  <li>**Color:** The box-shadow color</li>
 </ol>
 
 
