@@ -1,4 +1,4 @@
-# This is my portfolio summarization
+# This is my project summarization
 
 ## ✏️ Project System
 
