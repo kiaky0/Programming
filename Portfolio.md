@@ -26,7 +26,7 @@ Comment: This is the team work project system with the use of C++ language. The 
 
 - Pitch Deck Slides: [Solution Pitch Deck](https://www.canva.com/design/DAGKLNAXkyo/SkftOdofdt7KoyB8s-q97g/view)
 
-Comment: we are focus on the business solution and the idea give away. Bootstrap and youtude api is used. **Donot hesitate on review the pitch deck slides**
+Comment: we are focus on the business solution and the idea give away. Bootstrap and youtude api is used. **Do not hesitate on review the pitch deck slides**
 
 <div align="center"> <img src="https://github.com/kiaky0/Programming/blob/main/souce/Screenshot1.png" width="900px"> </div><br>
 
