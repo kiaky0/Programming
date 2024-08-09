@@ -1,0 +1,18 @@
+Shaolin Soccer
+50
+0
+Movie about a guys playing soccer using KungFu
+7.45PM
+10.00PM
+KungFu Panda
+30
+20
+Story about how a panda becoming a KungFu master
+5.00PM
+7.00PM
+The Karate Kid
+25
+70
+A boy Dre Parker learn Kung Fu with Jackie Chan
+9.30AM
+12.00PM
