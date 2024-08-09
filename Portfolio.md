@@ -1,13 +1,6 @@
 # This is my portfolio summarization
 
- <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
-    </div>
-    <div class="text">
-        <h3>Phone</h3>
-        <p>012-3456789</p>  
-    </div>
-
-## A. Project System
+## ✏️ Project System
 
 ### 1. Stock Management System
 
@@ -68,7 +61,13 @@ Noted: This is the website that my I still building on it and have no done yet
 <div align="center"> <img src="https://github.com/kiaky0/Programming/blob/main/souce/Screenshot11.png" width="900px"> </div><br>
 
 
+## 🖥️ Database System
 
+- [Report](https://docs.google.com/document/d/1aThN3jwFFLyD2z_45lfRqiNzvGg_2zt6/edit?usp=sharing&ouid=110781702400766413768&rtpof=true&sd=true)
+
+- [Presentation for the report]()
+
+Comment: The report are including the MySQL language source code. 
 
 
 
