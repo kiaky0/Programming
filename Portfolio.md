@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/aa66ef0c-33ca-4455-9817-19e9dd07b590)# This is my portfolio summarization
+# This is my portfolio summarization
 
 ## A. Project System
 
