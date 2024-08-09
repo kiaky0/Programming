@@ -4,7 +4,7 @@
 
 ### 1. Stock Management System
 
-- [SourceCode](https://github.com/kiaky0/Programming/tree/main/Utar_Project/StockManagement_source_code)
+- Source Code: [SourceCode](https://github.com/kiaky0/Programming/tree/main/Utar_Project/StockManagement_source_code)
 
 - Video Presentation: [Drive](https://drive.google.com/file/d/1L6Da1WR9Dx66DrrJpRFq_umsqZf7i--y/view?usp=drive_link)
 
@@ -14,7 +14,7 @@ Comment：This is the team work project system with the use of Java language wit
 
 ### 2. Cinema Ticketing System
 
-- [SourceCode](https://github.com/kiaky0/Programming/tree/main/Utar_Project/CinemaTicketingSystem)
+- Source Code: [SourceCode](https://github.com/kiaky0/Programming/tree/main/Utar_Project/CinemaTicketingSystem)
 
 Comment: This is the team work project system with the use of C++ language. The UI only allow user to use through console panel. 
 
@@ -22,11 +22,11 @@ Comment: This is the team work project system with the use of C++ language. The 
 
 ### 3. Hackathon Project 
 
-- [SourceCode](https://github.com/kiaky0/HackInsan)
+- Source Code: [SourceCode](https://github.com/kiaky0/HackInsan)
 
-- [Solution Pitch Deck](https://www.canva.com/design/DAGKLNAXkyo/SkftOdofdt7KoyB8s-q97g/view)
+- Pitch Deck Slides: [Solution Pitch Deck](https://www.canva.com/design/DAGKLNAXkyo/SkftOdofdt7KoyB8s-q97g/view)
 
-Comment: we are focus on the business solution and the idea give away. Bootstrap and youtude api is used.
+Comment: we are focus on the business solution and the idea give away. Bootstrap and youtude api is used. **Donot hesitate on review the pitch deck slides**
 
 <div align="center"> <img src="https://github.com/kiaky0/Programming/blob/main/souce/Screenshot1.png" width="900px"> </div><br>
 
@@ -42,7 +42,7 @@ Comment: we are focus on the business solution and the idea give away. Bootstrap
 
 Noted: This is the website that my I still building on it and have no done yet
 
-- [SourceCode](https://github.com/kiaky0/Discover-Malaysia-Website)
+- Source Code: [SourceCode](https://github.com/kiaky0/Discover-Malaysia-Website)
 
 <br>
 
@@ -63,9 +63,9 @@ Noted: This is the website that my I still building on it and have no done yet
 
 ## 🖥️ Database System
 
-- [Report](https://docs.google.com/document/d/1aThN3jwFFLyD2z_45lfRqiNzvGg_2zt6/edit?usp=sharing&ouid=110781702400766413768&rtpof=true&sd=true)
+- FUll Report: [Report](https://docs.google.com/document/d/1aThN3jwFFLyD2z_45lfRqiNzvGg_2zt6/edit?usp=sharing&ouid=110781702400766413768&rtpof=true&sd=true)
 
-- [Presentation for the report]()
+- Video Presentation: [Presentation for the report]()
 
 Comment: The report are including the MySQL language source code. 
 
