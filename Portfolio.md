@@ -28,7 +28,7 @@ Comment: This is the team work project system with the use of C++ language. The 
 
 Comment: we are focus on the business solution and the idea give away. Bootstrap and youtude api is used.
 
-<div align="center"> <img src="https://github.com/kiaky0/Programming/blob/main/souce/Screenshot1.png" width="200px"> </div><br>
+<div align="center"> <img src="https://github.com/kiaky0/Programming/blob/main/souce/Screenshot1.png" width="700px"> </div><br>
 
 
 
