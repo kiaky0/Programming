@@ -20,6 +20,8 @@
 
 - [Content for UTAR learning](https://github.com/kiaky0/python_learning/blob/main/README.md)
 
+- [Training Model Project](https://github.com/kiaky0/python_learning/tree/main/UTAR_AI/AI_Model_Project)
+
 # Front End Development
 
 - [Note FrontEnd](https://github.com/kiaky0/Programming/tree/main/FrontEndDev/Note)
